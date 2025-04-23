@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Header from './Header';
 import Sidebar from './Sidebar';
@@ -8,7 +10,7 @@ interface DashboardLayoutProps {
 
 const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-white">
       <Header />
       <div className="flex">
         <Sidebar />

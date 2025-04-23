@@ -7,20 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundColor: {
-        DEFAULT: 'var(--background-color)',
-        primary: 'var(--primary-color)',
-        secondary: 'var(--secondary-color)',
-      },
-      textColor: {
-        DEFAULT: 'var(--text-color)',
-        primary: 'var(--primary-color)',
-        secondary: 'var(--secondary-color)',
-      },
-      borderColor: {
-        DEFAULT: 'var(--border-color)',
-        primary: 'var(--primary-color)',
-        secondary: 'var(--secondary-color)',
+      colors: {
+        primary: {
+          DEFAULT: '#002366',
+        },
+        secondary: '#7B1113',
       },
     },
   },

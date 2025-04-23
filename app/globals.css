@@ -5,36 +5,10 @@
 :root {
   --primary-color: #002366;
   --secondary-color: #7B1113;
-  --background-color: #FFFFFF;
-  --text-color: #1F2937;
-  --border-color: #E5E7EB;
 }
 
 [data-theme='dark'] {
   --primary-color: #60A5FA;
   --secondary-color: #F87171;
-  --background-color: #111827;
-  --text-color: #F9FAFB;
-  --border-color: #374151;
-}
-
-@layer base {
-  body {
-    @apply bg-background text-text;
-  }
-}
-
-@layer components {
-  .btn-primary {
-    @apply bg-primary text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors;
-  }
-  
-  .btn-secondary {
-    @apply bg-secondary text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors;
-  }
-  
-  .card {
-    @apply bg-background border border-border rounded-lg shadow-sm p-6;
-  }
 }
 
