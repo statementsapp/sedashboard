@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import { useTheme } from '../../context/ThemeContext';
 
 const Header = () => {
@@ -45,7 +44,6 @@ const Header = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              {/* <span className="ml-2 text-lg font-semibold tracking-tight">Southeast Dashboard</span> */}
             </div>
           </div>
           <div className="flex items-center space-x-4">
