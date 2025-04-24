@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { PortData } from '@/types/port';
 import 'leaflet/dist/leaflet.css';
+import type { Map, Layer, Marker } from 'leaflet';
 
 // Custom icons for different port types
 const inlandPortIcon = {
@@ -22,7 +23,7 @@ const seaportIcon = {
 };
 
 const MapView = () => {
-  const mapRef = useRef<any>(null);
+  const mapRef = useRef<Map | null>(null);
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const [portData, setPortData] = useState<PortData[]>([]);
   const [isClient, setIsClient] = useState(false);
@@ -79,7 +80,7 @@ const MapView = () => {
 
     import('leaflet').then((L) => {
       // Clear existing port markers
-      mapRef.current.eachLayer((layer: any) => {
+      mapRef.current.eachLayer((layer: Layer) => {
         if (layer instanceof L.Marker && layer.getPopup()?.getContent()?.includes('Port')) {
           mapRef.current?.removeLayer(layer);
         }
