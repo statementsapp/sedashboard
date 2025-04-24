@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { PortData } from '@/types/port';
 import 'leaflet/dist/leaflet.css';
-import type { Map, Layer, Marker } from 'leaflet';
+import type { Map, Layer } from 'leaflet';
 
 // Custom icons for different port types
 const inlandPortIcon = {
