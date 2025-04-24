@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { PortData } from '@/types/port';
+import { PortData } from '../../../src/types/port';
 
 // This would typically fetch from a database or external API
 // For now, we'll use static data that we can update with real data later
