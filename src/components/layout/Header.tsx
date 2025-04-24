@@ -45,7 +45,7 @@ const Header = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span className="ml-2 text-lg font-semibold tracking-tight">Southeast Dashboard</span>
+              {/* <span className="ml-2 text-lg font-semibold tracking-tight">Southeast Dashboard</span> */}
             </div>
           </div>
           <div className="flex items-center space-x-4">
