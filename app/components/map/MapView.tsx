@@ -80,11 +80,13 @@ const MapView = () => {
 
     import('leaflet').then((L) => {
       // Clear existing port markers
-      mapRef.current.eachLayer((layer: Layer) => {
-        if (layer instanceof L.Marker && layer.getPopup()?.getContent()?.includes('Port')) {
-          mapRef.current?.removeLayer(layer);
-        }
-      });
+      if (mapRef.current) {
+        mapRef.current.eachLayer((layer: Layer) => {
+          if (layer instanceof L.Marker && layer.getPopup()?.getContent()?.includes('Port')) {
+            mapRef.current?.removeLayer(layer);
+          }
+        });
+      }
 
       // Add port markers with statistics
       portData.forEach(port => {
