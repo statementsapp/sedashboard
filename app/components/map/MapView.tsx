@@ -82,8 +82,12 @@ const MapView = () => {
       // Clear existing port markers
       if (mapRef.current) {
         mapRef.current.eachLayer((layer: Layer) => {
-          if (layer instanceof L.Marker && layer.getPopup()?.getContent()?.includes('Port')) {
-            mapRef.current?.removeLayer(layer);
+          if (layer instanceof L.Marker) {
+            const popup = layer.getPopup();
+            const content = popup?.getContent();
+            if (typeof content === 'string' && content.includes('Port')) {
+              mapRef.current?.removeLayer(layer);
+            }
           }
         });
       }
