@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import { PortData } from '@/types/port';
+import { PortData } from '../../../src/types/port';
 import 'leaflet/dist/leaflet.css';
 import type { Map, Layer } from 'leaflet';
 
